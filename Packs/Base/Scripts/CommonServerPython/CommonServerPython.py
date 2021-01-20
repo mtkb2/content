@@ -5258,6 +5258,7 @@ if 'requests' in sys.modules:
             self._headers = headers
             self._auth = auth
             self._session = requests.Session()
+            self._proxies = handle_proxy()
             if not proxy:
                 self._session.trust_env = False
 
